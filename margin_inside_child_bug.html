@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="block1">
+    <h3 class="block1__title">bug in margin-top</h1>
+  </div>
+
+  <div class="block2">
+    <h3 class="block2__title">adjust bug</h1>
+  </div>
+
+
+  <style>
+    .block1 {background: #1122ff;}
+    /*margin don't apply in child element, but, in father element*/
+    .block1 .block1__title {margin-top: 8rem;}
+
+    .block2 {background-color: #eeff22; padding-top: 8rem;}
+  </style>
+  
+
+
+
+
+</body>
+</html>
