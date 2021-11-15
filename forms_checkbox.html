@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="">
+    <input type="checkbox" name="" id="chk1">
+    <label for="chk1">Ok, pode ler meus dados e vender para os russos.</label>
+
+    <br>
+
+    <input type="radio" name="" id="rdt1">
+    <label for="rdt1">Escolha essa!</label>
+  </form>
+
+  <style>
+
+  /* Esconde por completo os botões, mantendo a acessiblidade na página */ 
+  input {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+    /* label logo após o input */
+    input + label::before {
+      content: '';
+      display: inline-block;
+      width: .7rem;
+      height: .7rem;
+      border: 1px solid #000000;
+      margin-right: 0.5rem;
+      transition: 0.1s;
+      padding: 1px;
+      background-clip: content-box;
+    }
+
+    input[type="radio"] + label::before {
+      border-radius: 50%;
+    }
+    /* Ação ao checar*/
+    input:checked + label::before{
+      background-color: #0091d4;
+    }
+  </style>
+  
+</body>
+</html>
