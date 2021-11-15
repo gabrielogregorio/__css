@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>O media querie do meio não é aplicado porque tem especividade menor que o proprio paragrifo, e o ultimo media querie tem a mesma especividade, porém, está na parte inferior da tela, ganhando por estar mais em baixo</h3>
+  <p class="paragrify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto animi vel placeat reiciendis doloribus earum laudantium. Deleniti earum unde quisquam asperiores autem totam illum, blanditiis sequi consectetur quas. Qui, nesciunt.</p>
+
+  <style>
+
+    p.paragrify {
+      color: red;
+    }
+
+    @media screen and (min-width: 500px) {      
+      .paragrify {
+        color: yellow;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      p.paragrify {
+        color: green;
+      }
+    }
+  </style>
+</body>
+</html>
