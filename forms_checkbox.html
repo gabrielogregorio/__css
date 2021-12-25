@@ -9,19 +9,22 @@
 <body>
 
   <form action="">
-    <input type="checkbox" name="" id="chk1">
+    <input class="input" type="checkbox" name="" id="chk1">
     <label for="chk1">Ok, pode ler meus dados e vender para os russos.</label>
 
     <br>
 
-    <input type="radio" name="" id="rdt1">
+    <input class="input" type="radio" name="" id="rdt1">
+    <label for="rdt1">Escolha essa!</label>
+
+    <input class="inputAccent" type="radio" name="" id="rdt1">
     <label for="rdt1">Escolha essa!</label>
   </form>
 
   <style>
 
   /* Esconde por completo os botões, mantendo a acessiblidade na página */ 
-  input {
+  .input {
     border: 0;
     clip: rect(0, 0, 0, 0);
     width: 0;
@@ -30,7 +33,7 @@
   }
 
     /* label logo após o input */
-    input + label::before {
+    .input + label::before {
       content: '';
       display: inline-block;
       width: .7rem;
@@ -42,12 +45,16 @@
       background-clip: content-box;
     }
 
-    input[type="radio"] + label::before {
+    .input[type="radio"] + label::before {
       border-radius: 50%;
     }
     /* Ação ao checar*/
-    input:checked + label::before{
+    .input:checked + label::before{
       background-color: #0091d4;
+    }
+
+    .inputAccent {
+      accent-color: red;
     }
   </style>
   
